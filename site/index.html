@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{company}}</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="burger" aria-label="Відкрити меню">
+  <span></span><span></span><span></span>
+</button>
+
+<div class="drawer-backdrop"></div>
+<nav class="drawer">
+  <button class="drawer-close" aria-label="Закрити меню"><span></span><span></span></button>
+  <div class="drawer-brand" data-company-name>{{company}}</div>
+  <div class="drawer-nav">
+    <a href="genealogy.html"><span class="idx">01</span>Генеалогія</a>
+    <a href="news.html"><span class="idx">02</span>Новини</a>
+  </div>
+  <div class="drawer-foot">
+    <a href="tel:+380686016125">+380 68 601 61 25</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <img class="hero-logo" src="logo.png" alt="Логотип">
+  <div class="hero-slides"></div>
+  <div class="hero-scrim"></div>
+
+  <button class="hero-arrow prev" aria-label="Попереднє фото">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="hero-arrow next" aria-label="Наступне фото">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+
+  <div class="hero-caption">
+    <div class="eyebrow"></div>
+    <h1 class="serif"></h1>
+  </div>
+
+  <div class="scroll-cue">Гортайте вниз \u2014 новини</div>
+
+  <div class="hero-bottom">
+    <div class="hero-index mono"></div>
+    <div class="hero-dots"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <span class="section-eyebrow mono">Останні записи</span>
+      <h2 class="serif">Новини</h2>
+    </div>
+    <a class="section-more" href="news.html">Усі новини \u2192</a>
+  </div>
+  <div class="news-grid" data-news-preview></div>
+</section>
+
+<footer class="site-foot">
+  <span data-company-name>{{company}}</span>
+  <a href="tel:+380686016125">+380 68 601 61 25</a>
+</footer>
+
+<script src="photos-data.js"></script>
+<script src="news-data.js"></script>
+<script src="script.js"></script>
+<script src="hero.js"></script>
+<script src="news-preview.js"></script>
+</body>
+</html>
